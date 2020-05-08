@@ -49,7 +49,7 @@ Demo #1: Detector
 * Unauthorized identity will be recognized with a red bounding box and an unauthorized text string on top of it.
 * In the console, you may check the detailed information of that person when he or she checked in. Information includes the the **current_check_in_time**, **next_availabe_check_in_time**, the **_id** of that person, and the **name** of the person.
 
-*** Notes: the user may customize the time interval gap between **current_check_in_time** and the **next_availabe_check_in_time** (Default gap is set to 3 hours). Please check [HERE](#Setup) for instructions.
+*** Notes: the user may customize the time-interval gap between **current_check_in_time** and the **next_availabe_check_in_time** (Default gap is set to 3 hours). Please check [HERE](#Setup) for instructions.
 
 ![](/demo_screenshots/001.jpeg)
 (#figure 01: QR_Code Detector Running in Real-time)
@@ -87,7 +87,7 @@ $ cd QR_detector_api
 $ sudo apt-get install -y tree
 $ tree
 ```
-*** Your working directory should be shown as below:
+*** Your working directory should be as shown below:
 ```bash
 .
 ├── db
