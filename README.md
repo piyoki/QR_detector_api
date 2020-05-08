@@ -294,7 +294,7 @@ Database flag Table
 * [Updata data](Update-data)
 
 |Operation                   |Flags        |Description                                                                                |
-|:---------------------------|:-----------:|:------------------------------------------------------------------------------------------|
+|:---------------------------|:------------|:------------------------------------------------------------------------------------------|
 |create a new user           |--init       |create a user instance with the rights to read, delete, and update objects in the databases|
 |get data of registered user |--get_users  |retrieve a list of registered user data                                                    |
 |all                         |--all        |                                                                                           |
