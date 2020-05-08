@@ -159,13 +159,18 @@ Database Module
 
 An embeded light database module (Tinydb) is installed with the app. 
 
-* The app will instantiate two databases: **db**(for storing identity), and **check_in_db**(for storing check-in record)
+* The app will instantiate two databases: **db**(for storing identity) and **check_in_db**(for storing check-in record)
 
 * User may retrieve data from the databases by passing specific operation commands. There are multiple operations you may play around with the database module. You are required to go through the **authentication process** before running the operators.
 * User instances are limited to certain operators, whereas an **admin user** (created in first-time usage) grants rights to all operators.
 * For the usage of each operator, please check out the operation examples below:
 
-**Create a new user:**
+### Operators:
+
+* [Create a new user](#Createanewuser)
+* [Switch User](#Switchuser)
+
+#### Create a new user
 
 *** This operator will create a user instance with the rights to read, delete, and update objects in the databases. 
 
@@ -173,6 +178,15 @@ An embeded light database module (Tinydb) is installed with the app.
 
 ```bash
 $ python3 db.py --init
+```
+
+#### Switch User
+
+*** To switch to another user, you need to modify the access_token associated with that user in db.py
+
+```python
+# Token is for authorizing your identity
+ACCESS_TOKEN="TOKEN"
 ```
 
 **Get the list of all registered users:**
