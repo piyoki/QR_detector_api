@@ -60,6 +60,7 @@ Demo #1: Detector
 ![](/demo_screenshots/002.png)
 
 *** Check out the detailed description of how to run the operator [HERE](#How-to-Use).
+
 *** Check out the flag table [HERE](#).
 
 <a name="Demo #1: Detector"></a>
