@@ -88,7 +88,7 @@ Demo #2: Database
 **Remove data**
 **Updata data**
 
-*** Check out the detailed description for each operator [HERE](#Operators:).
+*** Check out the detailed description for each operator [HERE](#Operators).
 
 *** Check out the flag table [HERE](#Database-Flag-Table).
 
@@ -209,7 +209,7 @@ An embeded light database module (Tinydb) is installed with the app.
 * User instances are limited to certain operators, whereas an **admin user** (created in first-time usage) grants rights to all operators.
 * For the usage of each operator, please check out the operation examples below:
 
-### Operators:
+### Operators
 
 * [Create a new user](#Create-a-new-user)
 * [Switch User](#Switch-User)
