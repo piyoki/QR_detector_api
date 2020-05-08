@@ -98,7 +98,7 @@ $ python3 db.py --init
 
 *** In db.py modify the access_token associated with that user
 
-```bash
+```python
 # Token is for authorizing your identity
 # Ask admin if you dont have one
 ACCESS_TOKEN="TOKEN" # <- Switch User
@@ -387,6 +387,31 @@ Basic Usage
 
 
 <a name="Basic Usage"></a>
+
+Other Usage
+-----------
+
+Open ./utils/opencv.py, and navigate to line 27
+
+```python
+def authorization(self,myData):
+    check=False
+    # decode myData
+    data = self.decode(myData)
+    if data in myDataList:
+        check=True
+        color=(0,255,0)
+        msg='Authorized!'
+        db.check_in(data,1,3)
+        # Do something else
+    else:
+        color=(0,0,255)
+        msg='Unauthorized!'
+    return check,color,msg
+
+```
+
+Add another IoT module such as (SMS module, Servo, MQTT, etc) below line 27 (# Do something else)
 
 Web Module
 ----------
