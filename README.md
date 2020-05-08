@@ -169,6 +169,10 @@ An embeded light database module (Tinydb) is installed with the app.
 
 * [Create a new user](#Create-a-new-user)
 * [Switch User](#Switch-User)
+* [Get data of registered user](#Get-data-of-registered-user)
+* [Read data](Read-data)
+* [Remove data](Remove-data)
+* [Updata data](Update-data)
 
 #### Create a new user
 
@@ -189,7 +193,7 @@ $ python3 db.py --init
 ACCESS_TOKEN="TOKEN"
 ```
 
-**Get the list of all registered users:**
+#### Get data of registered user
 
 *** This operator will retrieve a list of registered user data. 
 
@@ -197,12 +201,63 @@ ACCESS_TOKEN="TOKEN"
 
 Retrieve data for all registered users: 
 ```bash
-$ python3 db.py -d --all
+$ python3 db.py --get_users --all
 ```
 
 Retrieve data for a particular registered user:
 ```bash
-$ python3 db.py -d --name name
+$ python3 db.py --get_users --name name
+```
+
+#### Read data
+
+*** This operator will fetch data from a database
+*** If the name of the database is not specified, then the operator will fetch data from the default db (For storing identity data)
+* The flag **--name** needs to be passed with the command to specify the name of the database.
+
+Fetch data from the default db(for storing identity)
+```bash
+$ python3 db.py -d
+```
+
+*** If the flag **--name check_in_db** is passed, the operator will fectch data from the check_in_db (for storing check-in record)
+
+Fetch data from the check_in_db(for storing check-in record)
+```bash
+$ python3 db.py -d --name check_in_db
+```
+
+#### Remove data
+
+*** This operator will remove data from a db. 
+* The flag **--name** needs to be passed with the command to specify the name of the database.
+* The flag **--all** needs to be passed with the command to remove all data from the db.
+* The flag **--id** needs to be passed with the command to specify which data to be deleted. You may need to retrieve identity data to get the id 
+    ```bash
+    $ python3 db.py -d --all
+    ```
+
+Remove all data from db(for storing identity)
+```bash
+$ python3 db.py -r --name db --all
+```
+Remove all data from check_in_db(for storing check-in record)
+```bash
+$ python3 db.py -r --name check_in_db --all
+```
+Remove data with id from db(for storing identity)
+```bash
+$ python3 db.py -r --id id
+```
+
+#### Updata data
+
+*** This operator will update data with a specified id from the db(for storing identity data)
+* The flag **--name** needs to be passed with the command to specify the name of the database.
+* The flag **--id** needs to be passed with the command to specify which data to be deleted. You may need to retrieve identity data to get the id 
+
+```bash
+$ python3 db.py -u --id id --name new_name
 ```
 
 
