@@ -15,7 +15,7 @@ class opencv():
         data=literal_eval(myData)
         return data
 
-    def authorization(self,myData):
+    def authorization(self,myData,interval):
         check=False
         # decode myData
         data = self.decode(myData)
@@ -23,15 +23,15 @@ class opencv():
             check=True
             color=(0,255,0)
             msg='Authorized!'
-            db.check_in(data,1,3)
+            db.check_in(data,1,interval)
             # Do something else
         else:
             color=(0,0,255)
             msg='Unauthorized!'
         return check,color,msg
 
-    def draw_bbox(self,img,qrcode,myData):
-        check,color,msg = self.authorization(myData) # authorization
+    def draw_bbox(self,img,qrcode,myData,interval):
+        check,color,msg = self.authorization(myData,interval) # authorization
         cv2.putText(img,"Detecting",(10,45),font,0.5,(0,255,0),2)
         pts_rect=qrcode.rect
         # if authorized draw green box, else draw red box

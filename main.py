@@ -9,6 +9,9 @@ qr=qr_code()
 parser=qr_argparser()
 app=opencv()
 
+# Interval has be in range [1 to 35]
+interval=5 # Default value is set to 3 hours
+
 def header(string):
     num=len(string)+2
     print('+','-'*num,'+')
@@ -29,7 +32,7 @@ def run():
         for qrcode in decode(img):
             myData = qrcode.data.decode('utf-8') #decode to str
             # print(myData)
-            app.draw_bbox(img,qrcode,myData) # add bounding box
+            app.draw_bbox(img,qrcode,myData,interval) # add bounding box
 
         app.fps_display(img,timer) # display fps
         cv2.imshow('QR_code Dector',img)
