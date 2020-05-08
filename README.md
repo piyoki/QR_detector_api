@@ -43,14 +43,26 @@ Furthermore, the app requires 'cv2'(OpenCV) module in Python3. If you are using 
 Demo #1: Detector
 -----------------
 
-![](/demo_screenshots/001.jpg)
+*** This demo illustrates how to run the QR_Code Detector in real-time.
 
-This demo illustrates how to
+* Authorized identity will be recognized with a green bounding box and an authorized text string on top of it.
+* Unauthorized identity will be recognized with a red bounding box and an unauthorized text string on top of it.
+* In the console, you may check the detailed information of that person when he or she checked in. Information includes the the **current_check_in_time**, **next_availabe_check_in_time**, the **_id** of that person, and the **name** of the person.
+
+*** Notes: the user may customize the time interval gap between **current_check_in_time** and the **next_availabe_check_in_time** (Default gap is set to 3 hours). Please check [HERE](#Setup) for instructions.
+
+![](/demo_screenshots/001.jpeg)
+(#figure 01: QR_Code Detector Running in Real-time)
+
+![](/demo_screenshots/002.png)
+(#figure 02: Displaying the check-in information)
 
 <a name="Demo #1: Detector"></a>
 
 Demo #2: Database
 -----------------
+
+*** This demo illustrates how to run retrieve data from the databases
 
 This demo illustrates how to
 
