@@ -293,16 +293,16 @@ Database flag Table
 * [Remove data](Remove-data)
 * [Updata data](Update-data)
 
-|Operation                           |Flags                |Description                                                                                |
-|:-----------------------------------|:--------------------|:------------------------------------------------------------------------------------------|
-|create a new user                   |--init               |create a user instance with the rights to read, delete, and update objects in the databases|
-|get data of registered user         |--get_users          |retrieve a list of registered user data                                                    |
-|all                                 |--all                |flag all data                                                                              |
-|name                                |--name               |specify name                                                                               |
-|id                                  |--id                 |specify id                                                                                 |
-|read data                           |-d                   |fetch data from a database                                                                 |
-|remove data                         |-r                   |remove data from a db                                                                      |
-|updata data                         |-u                   |update data with a specified id from the db(for storing identity data)                     |
+|Operation                          |Flags               |Description                                                                                |
+|-----------------------------------|--------------------|------------------------------------------------------------------------------------------|
+|create a new user                  |--init              |create a user instance with the rights to read, delete, and update objects in the databases|
+|get data of registered user        |--get_users         |retrieve a list of registered user data                                                    |
+|all                                |--all               |flag all data                                                                              |
+|name                               |--name              |specify name                                                                               |
+|id                                 |--id                |specify id                                                                                 |
+|read data                          |-d                  |fetch data from a database                                                                 |
+|remove data                        |-r                  |remove data from a db                                                                      |
+|updata data                        |-u                  |update data with a specified id from the db(for storing identity data)                     |
 
 
 Database
