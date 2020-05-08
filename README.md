@@ -11,7 +11,9 @@ The identification data JSON string will be encoded in a form of QR_Code and sto
 * Furthermore, all demos should work on x86_64 PC or Mac as well.
 * The embbed **Database Module** allows the user to retrieve any important data created by the detector.
 
-The**Web Module** and the **Cloud Database Module** will be coming up soon ...
+*** The **Web Module** and the **Cloud Database Module** will be coming up soon ...
+
+*** Check out my blog post for implementation details: [Link](https://www.hikariai.net)
 
 Table of Contents
 -----------------
@@ -282,7 +284,26 @@ $ python3 db.py -u --id id --name new_name
 Basic Usage
 -----------
 
-App flag Table
+Database flag Table
+
+* [Create a new user](#Create-a-new-user)
+* [Switch User](#Switch-User)
+* [Get data of registered user](#Get-data-of-registered-user)
+* [Read data](Read-data)
+* [Remove data](Remove-data)
+* [Updata data](Update-data)
+
+|Operation                   |Flags        |Description                                                                                |
+|:---------------------------|:-----------:|:-----------------------------------------------------------------------------------------:|
+|create a new user           |--init       |create a user instance with the rights to read, delete, and update objects in the databases|
+|get data of registered user |--get_users  |retrieve a list of registered user data                                                    |
+|all                         |--all        |                                                                                           |
+|name                        |--name       |                                                                                           |
+|id                          |--id         |                                                                                           |
+|read data                   |-d           |                                                                                           |
+|remove data                 |-r           |                                                                                           |
+|updata data                 |-u           |                                                                                           |
+
 
 Database
 
