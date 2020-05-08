@@ -15,6 +15,8 @@ The identification data JSON string will be encoded in a form of QR_Code and sto
 
 *** Check out my blog post for implementation details: [Link](https://www.hikariai.net)
 
+*** Contact: yqlbu@bu.edu | kevinyu211@yahoo.com
+
 Table of Contents
 -----------------
 
@@ -63,7 +65,7 @@ Demo #1: Detector
 
 *** Check out the detailed description of how to run the operator [HERE](#How-to-Use).
 
-*** Check out the flag table [HERE](#).
+*** Check out the flag table [HERE](#Detector-Flag-Table).
 
 <a name="Demo #1: Detector"></a>
 
@@ -72,13 +74,22 @@ Demo #2: Database
 
 *** This demo illustrates how to execute multiple operations in the databases.
 
+* Create a new user
+* Switch User
 * Fetch user data from config
 * Fetch data from a specified db
-* Delete data
+* Remove data
 * Updata data
 
+**Create a new user**
+**Switch User**
+**Fetch user data from config**s
+**Fetch data from a specified database**
+**Remove data**
+**Updata data**
+
 *** Check out the detailed description for each operator [HERE](#Operators:).
-*** Check out the flag table [HERE](#).
+*** Check out the flag table [HERE](#Database-Flag-Table).
 
 
 <a name="Demo #1: Detector"></a>
@@ -168,6 +179,21 @@ $ python3 main.py -r
 *** In the console, you may also find the check-in information of that person
 
 ![](demo_screenshots/004.png)
+
+**Decode an input QR_Code**
+
+*** Copy the desired QR_Code, and then pass the input with the command flags as shown below:
+
+```bash
+$ python3 main.py -d --input path
+```
+
+```bash
+#for instance
+$ python3 main.py -d --input ~/workspace/QR_detector_api/data/41990392-9112-11ea-aca8-00044be58848.png
+```
+
+![](demo_screenshots/decode.png)
 
 <a name="How to Use"></a>
 
@@ -280,11 +306,10 @@ $ python3 db.py -r --id id
 $ python3 db.py -u --id id --name new_name
 ```
 
-
 Basic Usage
 -----------
 
-Dector Flag Table
+#### Detector Flag Table
 
 |Operation        |Flags      |Description                  |
 |:----------------|:----------|:----------------------------|
@@ -294,8 +319,7 @@ Dector Flag Table
 |run              |-r         |run the detector             |
 |input file       |--input    |pass an input file           |
 
-
-Database Flag Table
+#### Database Flag Table
 
 |Operation                           |Flags                |Description                                                                                |
 |:-----------------------------------|:--------------------|:------------------------------------------------------------------------------------------|
@@ -311,11 +335,6 @@ Database Flag Table
 
 
 <a name="Basic Usage"></a>
-
-Other Usage
-------------
-
-<a name="Other Usage"></a>
 
 Web Module
 ----------
