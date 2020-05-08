@@ -1,6 +1,6 @@
 # QR_detector_api
 
-This QR_detector_api demonstrates how to read/write identification data(JSON form) in a local database with a real-time detector. It can be used as a **real-ime employee check-in system**. Moreover, other IoT modules can be easily integrated with this api module.
+This QR_detector_api demonstrates how to read/write identification data(JSON form) in a local database with a real-time detector. It can be used as a **real-time employee check-in system**. Moreover, other IoT modules can be easily integrated with this api module.
 
 The identification data JSON string will be encoded in a form of QR_Code and store in the local database.
 
