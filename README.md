@@ -199,7 +199,7 @@ $ tree
 How to Use
 ----------
 
-**Step #0**: Initiate an admin account and instantiate databases
+**Step #0**: Create an admin account and instantiate databases
 
 ```bash
 $ python3 init.py
