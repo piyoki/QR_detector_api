@@ -51,20 +51,32 @@ Demo #1: Detector
 
 *** Notes: the user may customize the time-interval gap between **current_check_in_time** and the **next_availabe_check_in_time** (Default gap is set to 3 hours). Please check [HERE](#Setup) for instructions.
 
+**QR_Code Detector Running in Real-time**
+
 ![](/demo_screenshots/001.jpeg)
-(#figure 01: QR_Code Detector Running in Real-time)
+
+**Displaying the check-in information**
 
 ![](/demo_screenshots/002.png)
-(#figure 02: Displaying the check-in information)
+
+*** Check out the detailed description of how to run the operator [HERE](#How-to-Use).
+*** Check out the flag table [HERE](#).
 
 <a name="Demo #1: Detector"></a>
 
 Demo #2: Database
 -----------------
 
-*** This demo illustrates how to retrieve data from the databases
+*** This demo illustrates how to execute multiple operations in the databases.
 
-This demo illustrates how to
+* Fetch user data from config
+* Fetch data from a specified db
+* Delete data
+* Updata data
+
+*** Check out the detailed description for each operator [HERE](#Operators:).
+*** Check out the flag table [HERE](#).
+
 
 <a name="Demo #1: Detector"></a>
 
@@ -140,6 +152,8 @@ $ python3 main.py -n name
 ```
 *** The QR_Code will be saved in PNG format, and can be found in **./data**
 
+![](demo_screenshots/003.png)
+
 **Step #2**: Run the detector api by running the command below
 
 ```bash
@@ -150,7 +164,7 @@ $ python3 main.py -r
 
 *** In the console, you may also find the check-in information of that person
 
-![](demo_screenshots/003.png)
+![](demo_screenshots/004.png)
 
 <a name="How to Use"></a>
 
@@ -232,7 +246,7 @@ $ python3 db.py -d --name check_in_db
 *** This operator will remove data from a db. 
 * The flag **--name** needs to be passed with the command to specify the name of the database.
 * The flag **--all** needs to be passed with the command to remove all data from the db.
-* The flag **--id** needs to be passed with the command to specify which data to be deleted. You may need to retrieve identity data to get the id 
+* The flag **--id** needs to be passed with the command to specify which data to be deleted. You may need to retrieve identity data to get the id.
     ```bash
     $ python3 db.py -d --all
     ```
@@ -254,7 +268,10 @@ $ python3 db.py -r --id id
 
 *** This operator will update data with a specified id from the db(for storing identity data)
 * The flag **--name** needs to be passed with the command to specify the name of the database.
-* The flag **--id** needs to be passed with the command to specify which data to be deleted. You may need to retrieve identity data to get the id 
+* The flag **--id** needs to be passed with the command to specify which data to be deleted. You may need to retrieve identity data to get the id.
+    ```bash
+    $ python3 db.py -d --all
+    ```
 
 ```bash
 $ python3 db.py -u --id id --name new_name
