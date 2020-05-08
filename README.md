@@ -2,7 +2,7 @@
 
 This QR_detector_api demonstrates how to read/write identification data(JSON form) in a local database with a real-time detector. It can be used as a **real-ime employee check-in system**. Moreover, other IoT modules can be easily integrated with this api module.
 
-The identification data JSON string will be encoded in a form of QR_Code.
+The identification data JSON string will be encoded in a form of QR_Code and store in the local database.
 
 * Each identification data object has two attributes: the **_id** and the **name** associated with that _id
 
@@ -16,8 +16,6 @@ The**Web Module** and the **Cloud Database Module** will be coming up soon ...
 Table of Contents
 -----------------
 
-* [QR_detector_api](#qrdetectorapi)
-* [Table of Contents](#table-of-contents)
 * [Prerequisite](#prerequisite)
 * [Demo #1: Detector](#demo-1-detector)
 * [Demo #2: Database](#demo-2-database)
@@ -34,7 +32,7 @@ Please also make sure you have Python>=3.6 installed in your device.
 
 To install the Python3 packages, simply run the command below in your terminal:
 
-```shell
+```bash
 $ pip3 install -r requirement.txt
 ```
 
@@ -45,12 +43,18 @@ Furthermore, the app requires 'cv2'(OpenCV) module in Python3. If you are using 
 Demo #1: Detector
 -----------------
 
+![](/demo_screenshots/001.jpg)
+
 This demo illustrates how to
+
+<a name="Demo #1: Detector"></a>
 
 Demo #2: Database
 -----------------
 
 This demo illustrates how to
+
+<a name="Demo #1: Detector"></a>
 
 Setup
 -----
@@ -92,7 +96,7 @@ $ tree
     ├── qr_code.py
     └── timer.py
 ```
-
+<a name="Setup"></a>
 
 How to Use
 ----------
@@ -129,6 +133,7 @@ $ python3 main.py -n name
 $ python3 main.py -r
 
 ```
+<a name="How to Use"></a>
 
 Basic Usage
 -----------
@@ -137,10 +142,16 @@ App flag Table
 
 Database
 
+<a name="Basic Usage"></a>
+
 Other Usage
 ------------
+
+<a name="Other Usage"></a>
 
 Web Module
 ----------
 
 Coming soon ...
+
+<a name="Web Module"></a>
