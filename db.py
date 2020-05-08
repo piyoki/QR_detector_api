@@ -12,7 +12,7 @@ admin=False
 
 # Token is for authorizing your identity
 # Ask admin if you dont have one
-ACCESS_TOKEN="TOKEN"
+ACCESS_TOKEN="TOKEN" # <- Switch User
 
 
 def header(string):

@@ -57,6 +57,10 @@ Demo #1: Detector
 
 **QR_Code Detector Running in Real-time**
 
+```bash
+$ python3 main.py -r
+```
+
 ![](/demo_screenshots/001.jpeg)
 
 **Displaying the check-in information**
@@ -74,19 +78,66 @@ Demo #2: Database
 
 *** This demo illustrates how to execute multiple operations in the databases.
 
-* Create a new user
-* Switch User
-* Fetch user data from config
-* Fetch data from a specified db
-* Remove data
-* Updata data
+**Initialize the program** 
+
+```bash
+$ python3 init.py
+```
+
+![](demo_screenshots/init.png)
 
 **Create a new user**
+
+```bash
+$ python3 db.py --init
+```
+
+![](demo_screenshots/new_user.png)
+
 **Switch User**
-**Fetch user data from config**s
+
+*** In db.py modify the access_token associated with that user
+
+```bash
+# Token is for authorizing your identity
+# Ask admin if you dont have one
+ACCESS_TOKEN="TOKEN" # <- Switch User
+```
+
+**Fetch user data from config**
+
+```bash
+$ python3 db.py --get_user --all
+```
+
+![](demo_screenshots/fetch_user_data.png)
+
 **Fetch data from a specified database**
+
+```bash
+$ python3 db.py -d
+```
+```bash
+$ python3 db.py -d --name check_in_db
+```
+
+![](demo_screenshots/fetch_data.png)
+
 **Remove data**
+
+```bash
+$ python3 db.py -r -i id
+```
+
+![](demo_screenshots/remove_data.png)
+
 **Updata data**
+
+```bash
+$ python3 db.py -u --id id --name new_name
+```
+
+![](demo_screenshots/update_data.png)
 
 *** Check out the detailed description for each operator [HERE](#Database-Module).
 
