@@ -62,7 +62,7 @@ Demo #1: Detector
 Demo #2: Database
 -----------------
 
-*** This demo illustrates how to run retrieve data from the databases
+*** This demo illustrates how to retrieve data from the databases
 
 This demo illustrates how to
 
@@ -138,14 +138,59 @@ eg: $ python3 main.py -n kevin
 ```bash
 $ python3 main.py -n name
 ```
+*** The QR_Code will be saved in PNG format, and can be found in **./data**
 
 **Step #2**: Run the detector api by running the command below
 
 ```bash
 $ python3 main.py -r
-
 ```
+
+*** Open up the saved QR_Code.png in ./data, the detector should be able to detect the QR_code and decode its content.
+
+*** In the console, you may also find the check-in information of that person
+
+![](demo_screenshots/003.png)
+
 <a name="How to Use"></a>
+
+Database Module
+---------------
+
+An embeded light database module (Tinydb) is installed with the app. 
+
+* The app will instantiate two databases: **db**(for storing identity), and **check_in_db**(for storing check-in record)
+
+* User may retrieve data from the databases by passing specific operation commands. There are multiple operations you may play around with the database module. You are required to go through the **authentication process** before running the operators.
+* User instances are limited to certain operators, whereas an **admin user** (created in first-time usage) grants rights to all operators.
+* For the usage of each operator, please check out the operation examples below:
+
+**Create a new user:**
+
+*** This operator will create a user instance with the rights to read, delete, and update objects in the databases. 
+
+*** Only the admin user has the right to create a new user.
+
+```bash
+$ python3 db.py --init
+```
+
+**Get the list of all registered users:**
+
+*** This operator will retrieve a list of registered user data. 
+
+*** Only the admin user has the right to create a new user.
+
+Retrieve data for all registered users: 
+```bash
+$ python3 db.py -d --all
+```
+
+Retrieve data for a particular registered user:
+```bash
+$ python3 db.py -d --name name
+```
+
 
 Basic Usage
 -----------
