@@ -167,8 +167,8 @@ An embeded light database module (Tinydb) is installed with the app.
 
 ### Operators:
 
-* [Create a new user](#Createanewuser)
-* [Switch User](#Switchuser)
+* [Create a new user](#Create-a-new-user)
+* [Switch User](#Switch-User)
 
 #### Create a new user
 
