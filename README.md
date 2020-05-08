@@ -368,7 +368,6 @@ $ python3 db.py -u --id id --name new_name
 ```python
 # Interval has be in range [1 to 35]
 interval=3 # Default value is set to 3 hours
-
 ```
 
 Basic Usage
