@@ -25,7 +25,9 @@ Table of Contents
 * [Demo #2: Database](#demo-2-database)
 * [Setup](#setup)
 * [How to Use](#how-to-use)
-
+* [Database Module](#Database-Module)
+* [Basic Usage](#Basic-Usage)
+* [Other Usage](#Other-Usage)
 
 Prerequisite
 ------------
