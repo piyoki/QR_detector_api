@@ -41,13 +41,10 @@ class qr_code():
         # add data to db
         data=json.dumps(data) #json str
         db.add_data(data)
-    def decode(self,id):
-        img = cv2.imread(f'./data/{id}.png')
+    def decode(self,input_file):
+        img = cv2.imread(input_file)
         code=decode(img)
-        print('-'*30)
-        print('Decoding QR Code data ...')
+        self.header('Decoding QR Code data ...')
         for barcode in decode(img):
             data = barcode.data.decode('utf-8')
-            print(data)
-        print('-'*30)
-
+            print('-> ',data)

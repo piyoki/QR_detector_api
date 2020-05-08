@@ -45,10 +45,9 @@ def main():
         # Check certain types of argument
         if parser.get_args().name:
             qr.create()
-        if parser.get_args().id:
-            id=parser.get_args().id
         if parser.get_args().decode:
-            qr.decode(id)   
+            input_file=parser.get_args().input
+            qr.decode(input_file)
         if parser.get_args().run:  
             # Run the detection api
             run()

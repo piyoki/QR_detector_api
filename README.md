@@ -284,14 +284,18 @@ $ python3 db.py -u --id id --name new_name
 Basic Usage
 -----------
 
-Database flag Table
+Dector Flag Table
 
-* [Create a new user](#Create-a-new-user)
-* [Switch User](#Switch-User)
-* [Get data of registered user](#Get-data-of-registered-user)
-* [Read data](Read-data)
-* [Remove data](Remove-data)
-* [Updata data](Update-data)
+|Operation        |Flags      |Description                  |
+|:----------------|:----------|:----------------------------|
+|help             |-h         |help menu                    |
+|decode           |-d         |decode a QR_Code             |
+|create a QR_Code |-n         |create a QR_Code with name   |
+|run              |-r         |run the detector             |
+|input file       |--input    |pass an input file           |
+
+
+Database Flag Table
 
 |Operation                           |Flags                |Description                                                                                |
 |:-----------------------------------|:--------------------|:------------------------------------------------------------------------------------------|
@@ -300,12 +304,11 @@ Database flag Table
 |all                                 |--all                |flag all data                                                                              |
 |name                                |--name               |specify name                                                                               |
 |id                                  |--id                 |specify id                                                                                 |
+|help                                |-h                   |help menu                                                                                  |
 |read data                           |-d                   |fetch data from a database                                                                 |
 |remove data                         |-r                   |remove data from a db                                                                      |
 |updata data                         |-u                   |update data with a specified id from the db(for storing identity data)                     |
 
-
-Database
 
 <a name="Basic Usage"></a>
 
