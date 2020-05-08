@@ -10,7 +10,7 @@ parser=qr_argparser()
 app=opencv()
 
 # Interval has be in range [1 to 35]
-interval=5 # Default value is set to 3 hours
+interval=3 # Default value is set to 3 hours
 
 def header(string):
     num=len(string)+2

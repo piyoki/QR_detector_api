@@ -13,7 +13,7 @@ The identification data JSON string will be encoded in a form of QR_Code and sto
 
 *** The **Web Module** and the **Cloud Database Module** will be coming up soon ...
 
-*** Check out my blog post for implementation details: [Link](https://www.hikariai.net)
+*** Check out my blog post for implementation details: [www.hikariai.net](https://www.hikariai.net)
 
 *** Contact: yqlbu@bu.edu | kevinyu211@yahoo.com
 
@@ -53,7 +53,7 @@ Demo #1: Detector
 * Unauthorized identity will be recognized with a red bounding box and an unauthorized text string on top of it.
 * In the console, you may check the detailed information of that person when he or she checked in. Information includes the the **current_check_in_time**, **next_availabe_check_in_time**, the **_id** of that person, and the **name** of the person.
 
-*** Notes: the user may customize the time-interval gap between **current_check_in_time** and the **next_availabe_check_in_time** (Default gap is set to 3 hours). Please check [HERE](#Setup) for instructions.
+*** Notes: the user may customize the time-interval gap between **current_check_in_time** and the **next_availabe_check_in_time** (Default gap is set to 3 hours). Please check [HERE](#Change-check-time-interval) for instructions.
 
 **QR_Code Detector Running in Real-time**
 
@@ -265,9 +265,10 @@ An embeded light database module (Tinydb) is installed with the app.
 * [Create a new user](#Create-a-new-user)
 * [Switch User](#Switch-User)
 * [Get data of registered user](#Get-data-of-registered-user)
-* [Read data](Read-data)
-* [Remove data](Remove-data)
-* [Updata data](Update-data)
+* [Read data](#Read-data)
+* [Remove data](#Remove-data)
+* [Updata data](#Update-data)
+* [Change check time interval](#Change-check-time-interval)
 
 #### Create a new user
 
@@ -356,6 +357,18 @@ $ python3 db.py -r --id id
 
 ```bash
 $ python3 db.py -u --id id --name new_name
+```
+
+#### Change check time interval
+
+*** To customize the time-interval gap between **current_check_in_time** and the **next_availabe_check_in_time** (Default gap is set to 3 hours). 
+
+*** In ./main.py find the variable called "interval", modify it based on your own need.
+
+```python
+# Interval has be in range [1 to 35]
+interval=3 # Default value is set to 3 hours
+
 ```
 
 Basic Usage
