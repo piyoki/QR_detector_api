@@ -212,11 +212,11 @@ ACCESS_TOKEN="TOKEN"
 
 #### Get data of registered user
 
-*** This operator will retrieve a list of registered user data. 
+*** This operator will retrieve a list of registered user data.
 
 *** Only the admin user has the right to create a new user.
 
-Retrieve data for all registered users: 
+Retrieve data for all registered users:
 ```bash
 $ python3 db.py --get_users --all
 ```
@@ -246,7 +246,7 @@ $ python3 db.py -d --name check_in_db
 
 #### Remove data
 
-*** This operator will remove data from a db. 
+*** This operator will remove data from a db.
 * The flag **--name** needs to be passed with the command to specify the name of the database.
 * The flag **--all** needs to be passed with the command to remove all data from the db.
 * The flag **--id** needs to be passed with the command to specify which data to be deleted. You may need to retrieve identity data to get the id.
@@ -297,12 +297,12 @@ Database flag Table
 |:---------------------------|:------------|:------------------------------------------------------------------------------------------|
 |create a new user           |--init       |create a user instance with the rights to read, delete, and update objects in the databases|
 |get data of registered user |--get_users  |retrieve a list of registered user data                                                    |
-|all                         |--all        |                                                                                           |
-|name                        |--name       |                                                                                           |
-|id                          |--id         |                                                                                           |
-|read data                   |-d           |                                                                                           |
-|remove data                 |-r           |                                                                                           |
-|updata data                 |-u           |                                                                                           |
+|all                         |--all        |flag all data                                                                              |
+|name                        |--name       |specify name                                                                               |
+|id                          |--id         |specify id                                                                                 |
+|read data                   |-d           |fetch data from a database                                                                 |
+|remove data                 |-r           |remove data from a db                                                                      |
+|updata data                 |-u           |update data with a specified id from the db(for storing identity data)                     |
 
 
 Database
