@@ -1,9 +1,17 @@
 # QR_detector_api
 
-sometext
+This QR_detector_api demonstrates how to read/write identification data(JSON form) in a local database with a real-time detector. It can be used as a **real-ime employee check-in system**. Moreover, other IoT modules can be easily integrated with this api module.
 
-* nihaoma
-* wohenhao
+The identification data JSON string will be encoded in a form of QR_Code.
+
+* Each identification data object has two attributes: the **_id** and the **name** associated with that _id
+
+* The Detector API runs at ~40 FPS on Jetson Xavier.
+* All demos work on any Nvidia Jetson Devices such as TX2, Nano, and Xavier
+* Furthermore, all demos should work on x86_64 PC or Mac as well.
+* The embbed **Database Module** allows the user to retrieve any important data created by the detector.
+
+The**Web Module** and the **Cloud Database Module** will be coming up soon ...
 
 Table of Contents
 -----------------
@@ -47,7 +55,7 @@ This demo illustrates how to
 Setup
 -----
 
-Step-by-step
+**[Step-by-step]**
 
 **Step #1**: Clone this repository
 
@@ -105,16 +113,34 @@ $ python3 init.py
 ACCESS_TOKEN="TOKEN"
 ```
 
-**Step #1**: Run the detector api by running the command below
+**Step #1**: Add data
+
+*** "-n" flag is for creating a new QR_Code data object, you need to speciy the name of the data in the console
+
+eg: $ python3 main.py -n kevin
 
 ```bash
+$ python3 main.py -n name
+```
+
+**Step #2**: Run the detector api by running the command below
+
+```bash
+$ python3 main.py -r
 
 ```
 
-### Basic Usage
+Basic Usage
+-----------
 
-### Database
+App flag Table
 
-### Web Module
+Database
+
+Other Usage
+------------
+
+Web Module
+----------
 
 Coming soon ...
