@@ -63,6 +63,10 @@ Demo #1: Detector
 
 *** Notes: the user may customize the time-interval gap between **current_check_in_time** and the **next_availabe_check_in_time** (Default gap is set to 3 hours). Please check [HERE](#Change-check-time-interval) for instructions.
 
+**Setup Instructions** 
+
+*** Please follow the steps in the [Setup](#Setup) section, and [How To Use](#How-to-Use) section.
+
 **QR_Code Detector Running in Real-time**
 
 ```bash
