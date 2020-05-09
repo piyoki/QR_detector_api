@@ -92,6 +92,8 @@ Demo #2: Database
 
 **Initialize the program** 
 
+*** Notes: if you have finished the setup, please ignore the command below.
+
 ```bash
 $ python3 init.py
 ```
